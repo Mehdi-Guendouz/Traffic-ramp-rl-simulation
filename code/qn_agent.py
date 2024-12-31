@@ -17,6 +17,7 @@ class QLearningAgent:
         self.learning_rate = 0.1
         self.discount_factor = 0.99
         self.replay_buffer = deque(maxlen=1000)  # Add to class initialization
+        self.memory = deque(maxlen=2000)  # Add to class initialization
 
     def discretize_state(self, state):
         state = np.array(state)  # Convert the tuple to a numpy array
